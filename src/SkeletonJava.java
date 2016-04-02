@@ -80,6 +80,17 @@ public class SkeletonJava {
 
         int b = readIntConsole("Introduceti alt numar:");  // input using console
         printConsole("Ati introdus:" + b); // output using console
+
+        double media = ((a+b)/2);
+
+        printConsole("Media ta este: "+media);
+
+        if (media > 5) {
+            printConsole("Ai trecut clasa");
+        }
+        else {
+            printConsole("Esti varza");
+        }
     }
     //end of main method
 }
