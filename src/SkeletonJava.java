@@ -75,22 +75,22 @@ public class SkeletonJava {
 
     /* here starts the main class */
     public static void main(String[] arguments) {
-        int a = readIntGUI("Introduceti un numar:"); // input using GUI
-        printGUI("Ati introdus:" + a); // output using GUI
+        int suma = 0;
+        int note[] = new int[3];
+        for (int i=0; i<note.length;i++){
+            note [i]= readIntGUI ("Introduceti nota: ");
+            suma+= note[i];        }
 
-        int b = readIntConsole("Introduceti alt numar:");  // input using console
-        printConsole("Ati introdus:" + b); // output using console
+        int media = suma/note.length;
+        System.out.println("Media e: "+media);
 
-        double media = ((a+b)/2);
-
-        printConsole("Media ta este: "+media);
-
-        if (media > 5) {
-            printConsole("Ai trecut clasa");
+        int max = note[0];
+        for (int i=0; i< note.length; i++){
+            if (note[i] > max){
+                max=note[i];
+            }
         }
-        else {
-            printConsole("Esti varza");
-        }
+        System.out.println("Nota maxima e: "+max);
     }
     //end of main method
 }
